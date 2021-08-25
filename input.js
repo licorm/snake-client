@@ -1,7 +1,7 @@
 let connection;
 
 // setup interface to handle user input from stdin
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -11,7 +11,7 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }
@@ -27,8 +27,20 @@ const handleUserInput = function (key) {
   if (key === 'd') {
     connection.write('Move: right');
   }
+  if (key === 'j') {
+    connection.write('Say: sup');
+  }
+  if (key === 'k') {
+    connection.write('Say: hek');
+  }
+  if (key === 'l') {
+    connection.write('Say: fun');
+  }
+  if (key === 'h') {
+    connection.write('Say: yip');
+  }
 };
 
 module.exports = {
   setupInput
-}
+};
