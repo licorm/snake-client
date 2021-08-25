@@ -12,9 +12,12 @@ const connect = function () {
   });
   
   conn.on('connect', () => {
-    conn.write('Name: L13');
+    conn.write('Name: L13 Move');
+    // conn.write('Move: up');
+    // setInterval(function(){conn.write('Move: up')}, 50);
   });
   
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
